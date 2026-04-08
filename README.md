@@ -68,10 +68,14 @@ The Arduino sketch runs on the MKR WIFI 1010 and is located in [`arduino/onePixe
 
 **BLE service layout:**
 
+| | UUID |
+|---|---|
+| Service | `688c6011-fa63-429b-bea4-18517d46c9ee` |
+
 | Characteristic | UUID | Direction | Description |
 |---|---|---|---|
-| Status | `2A57` | Read / Write / Notify | `0` = ready, `1` = capturing, `2` = disconnected |
-| Pixel data | `2A58` | Read / Notify | `"<index>#<value>"` or `"EOT"` |
+| Status | `cbedefb3-b8ec-4656-b7db-96271f7f33d2` | Write / Notify | `0` = ready, `1` = capturing, `2` = disconnected |
+| Pixel data | `081458cb-264d-4b7f-8007-4e0cfbbe2300` | Notify | `"<index>#<value>"` or `"EOT"` |
 
 **Scan sequence:**
 
