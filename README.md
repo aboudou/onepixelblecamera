@@ -116,6 +116,16 @@ The companion app is a SwiftUI application located in [`ios/OnePixelBleCamera/`]
 
 ---
 
+## Demo
+
+The camera scanning a scene pixel by pixel, and the companion app assembling the image in real time over BLE.
+
+| Camera | iOS App |
+|--------|---------|
+| ![Camera scanning](images/gifs/scanning_camera.gif) | ![iOS app during capture](images/gifs/scanning_ios.gif) |
+
+---
+
 ## Results
 
 Reference images were captured in controlled conditions. Subsequent images were taken outdoors under varying weather to evaluate the camera's sensitivity and long-term stability.
