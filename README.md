@@ -4,6 +4,10 @@ A minimalist camera that scans a scene pixel by pixel using a single BPW34 photo
 
 ---
 
+> **Disclaimer** — This project was built as a demo for an introductory talk on Bluetooth Low Energy. The technique used to render the image on the iOS side — a `LazyVGrid` of 16,000 rectangles — is intentionally suboptimal: in a real-world app, you would use a `Canvas` for per-pixel drawing or convert the data directly to a `UIImage`. This approach was a deliberate choice for the talk, to make the BLE data flow visually explicit and pedagogically clear.
+
+---
+
 ## How It Works
 
 Instead of an image sensor array, this camera moves a single photodiode across a 160×100 grid using two SG90 servo motors — one for horizontal pan, one for vertical tilt. At each position, the microcontroller reads the ambient light level and transmits it over BLE. The iOS app receives each pixel as it is captured and assembles the final grayscale image.
